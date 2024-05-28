@@ -1,0 +1,4 @@
+../Core/Src/Button.c:26:5:is_button_pressed	16	static
+../Core/Src/Button.c:34:6:subKeyProcess	16	static
+../Core/Src/Button.c:39:5:is_long_button_flag	4	static
+../Core/Src/Button.c:47:6:getKeyInput	16	static
