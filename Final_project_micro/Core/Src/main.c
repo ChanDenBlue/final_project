@@ -99,7 +99,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   //setTimer2(100);
   //HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_RESET);
-  setTimer1(1000);
   setTimer2(100);
   while (1)
   {
