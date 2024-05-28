@@ -108,6 +108,7 @@ int main(void)
 		  HAL_GPIO_TogglePin(RED_LED_GPIO_Port, RED_LED_Pin) ;
 		  setTimer2(100);
 	  }
+	  fsm_simple_button_run();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
