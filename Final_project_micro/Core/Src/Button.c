@@ -21,7 +21,7 @@ int TimeOutForLongKeyPress = TIME_FOR_LONG_KEY;
 int button_flag[NUM_BUTTONS] = { RESET };
 int button_flag_1s[NUM_BUTTONS] = { RESET };
 
-int long_button_flag = 0;
+int long_button_flag[NUM_BUTTONS] = { RESET };
 
 int is_button_pressed(int index) {
 	if (button_flag[index] == 1) {
@@ -36,9 +36,9 @@ void subKeyProcess(int index) {
 	button_flag[index] = 1;
 
 }
-int is_long_button_flag() {
-	if (long_button_flag == 1) {
-		long_button_flag = 0;
+int is_long_button_flag(int index) {
+	if (long_button_flag[index] == 1) {
+		long_button_flag[index] = 0;
 		return 1;
 	}
 	return 0;
@@ -82,7 +82,7 @@ void getKeyInput() {
 					TimeOutForLongKeyPress--;
 
 					if (TimeOutForLongKeyPress == 0) {
-						long_button_flag = 1;
+						long_button_flag[i] = 1;
 						TimeOutForLongKeyPress = TIME_FOR_LONG_KEY;
 					}
 				}
